@@ -1,15 +1,13 @@
 #container {
     display: flex;
     box-sizing: border-box;
-    min-height: 90vh;
     border-radius: 5%
 }
 
 #box {
     box-sizing: inherit;
-    margin: 20px;
-    margin-top: 0px;
-    padding: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
     direction: flex;
     flex: 1;
     align-items: center;
@@ -22,9 +20,8 @@
     height: 20vh;
 }
 
-#key, #understoodText {
+#key, #understoodText, #halfSolvedText {
     height: 10vh;
     width: 100%;
     resize: none;
 }
-

@@ -10,11 +10,14 @@
     <div id="box" >
       <h2>Text from Ciphers</h2>
       <label for="cipherTexts">Messages</label>
+      <label style="font-size: 1ch">Seperated by comma in hex</label>
+      <br>
+      <label style="font-size: 1ch">Dont enter new line or spaces between strings, just add a comma in between</label>
       <textarea class="mainBox" id="cipherTexts" placeholder="Enter cipher Messages"/></textarea>
       <br>
       <button id="halfSolve">Get half solved message</button>
-      <p id="halfSolvedText">*****</p>
-      <textarea id="understoodText" placeholder="Try to decipher the last text found"></textarea>
+      <textarea readonly id="halfSolvedText"></textarea>
+      <textarea id="understoodText" placeholder="Try to guess the last text found"></textarea>
       <br><br>
       <button id="solve"> Solve </button>
       <br><br>
@@ -25,16 +28,21 @@
     <div id="box" >
       <h2>Text to Cipher</h2>
       <label for="simpleTexts">Messages</label>
+      <label style="font-size: 1ch">Seperated by comma as string</label>
+      <br>
+      <label style="font-size: 1ch">Dont enter new line or spaces between strings, just add a comma in between</label>
       <textarea class="mainBox" id="simpleTexts" type="text" placeholder="Enter simple Messages"/></textarea>
       <br><br>
       <label for="key">Key</label>
-      <textarea id="key" name="key" placeholder="Enter key or click random for a randomly generated key"></textarea>
+      <label style="font-size: 1ch">As string, atleast as long as messages</label>
+      <textarea id="key" placeholder="Enter key or click random for a randomly generated key"></textarea>
       <br><br>
       <button id="randomKey">Random Key</button>
       <br><br>
       <button id="getCipherTexts">Encrypt</button>
       <br><br>
       <label for="resultCipherTexts">Cipher Texts</label>
+      <label style="font-size: 1ch">in hex</label>
       <textarea readonly class="mainBox" id="resultCipherTexts" style="font-size: 1ch"></textarea>
     </div>
   </div>
