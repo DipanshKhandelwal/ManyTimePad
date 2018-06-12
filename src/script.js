@@ -1,3 +1,38 @@
+const cipherTexts = document.getElementById('cipherTexts');
+const halfSolveButton = document.getElementById('halfSolve');
+const halfSolveText = document.getElementById('halfSolvedText');
+const understoodText = document.getElementById('understoodText');
+const solveButton = document.getElementById('solve');
+const simpleMessages = document.getElementById('simpleMessages');
+
+const simpleTexts = document.getElementById('simpleTexts');
+const key = document.getElementById('key');
+const randomKeyButton = document.getElementById('randomKey');
+const encryptButton = document.getElementById('getCipherTexts');
+const resultCipherTexts = document.getElementById('resultCipherTexts');
+
+
+halfSolveButton.onclick = function() {
+    halfSolveText.textContent = solveCiphers(cipherTexts.value.toString().split(','));
+}
+
+solveButton.onclick = function() {
+    simpleMessages.textContent = getAnswers(cipherTexts.value.toString().split(','), understoodText.value.toString());
+}
+
+randomKeyButton.onclick = function() {
+    key.textContent = hexToString(randomKey(1024));
+}
+
+encryptButton.onclick = function() {
+    if(key.value == "") {
+        alert("Enter key");
+    }
+    resultCipherTexts.textContent = getCiphers(simpleTexts.value.toString().split(','), stringToHex(key.value) ).join('\n');
+}
+
+//////////////////////////////////////////////////////////////////////////
+
 // HELPER FUNCTIONS
 
 // Convert string to hex
